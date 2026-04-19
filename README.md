@@ -1,6 +1,6 @@
 # The `set-up-django-gdpr-cookie-consent` Skill
 
-This guide explains how to install the **set-up-django-gdpr-cookie-consent** skill into any AI editor that supports Claude skills (Claude Code, Augment Code, Cursor, and others).
+This guide explains how to install the **set-up-django-gdpr-cookie-consent** skill into any AI coding assistant that supports Claude skills (Claude Code, Augment Code, Cursor, and others).
 
 ## Why Use This Skill?
 
