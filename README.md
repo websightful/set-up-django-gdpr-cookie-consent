@@ -35,8 +35,10 @@ Common locations:
 Check out (or download and unzip) the repo and copy the skill to your `skills` directory:  
 
 ```bash
-git clone https://github.com/websightful/set-up-django-gdpr-cookie-consent.git ~/projects/django-gdpr-cookie-consent-skill
-cp -r ~/projects/django-gdpr-cookie-consent-skill/set-up-django-gdpr-cookie-consent ~/.claude/skills/set-up-django-gdpr-cookie-consent
+$ git clone https://github.com/websightful/set-up-django-gdpr-cookie-consent.git \
+~/projects/django-gdpr-cookie-consent-skill
+$ cp -r ~/projects/django-gdpr-cookie-consent-skill/set-up-django-gdpr-cookie-consent \
+~/.claude/skills/set-up-django-gdpr-cookie-consent
 ```
 
 The result should be a folder named `set-up-django-gdpr-cookie-consent` containing a `SKILL.md` file:
@@ -54,7 +56,7 @@ Make sure the `SKILL.md` file is directly inside the cloned folder:
 
 ```bash
 # Should print the SKILL.md path
-ls ~/.claude/skills/set-up-django-gdpr-cookie-consent/SKILL.md
+$ ls ~/.claude/skills/set-up-django-gdpr-cookie-consent/SKILL.md
 ```
 
 ### 4. Restart your AI editor (if required)
@@ -66,6 +68,10 @@ Some editors pick up new skills automatically; others require a restart or a set
 Open a new chat in your AI editor and try a prompt like:
 
 > "Set up GDPR cookie consent in my Django project."
+
+or
+
+> /set-up-django-gdpr-cookie-consent
 
 If the skill is loaded correctly, the AI will follow the structured workflow defined in `SKILL.md` rather than giving a generic answer.
 
@@ -82,5 +88,5 @@ If the skill is loaded correctly, the AI will follow the structured workflow def
 Simply delete the skill folder:
 
 ```bash
-rm -rf ~/.claude/skills/set-up-django-gdpr-cookie-consent
+$ rm -rf ~/.claude/skills/set-up-django-gdpr-cookie-consent
 ```
