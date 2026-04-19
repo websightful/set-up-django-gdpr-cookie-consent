@@ -13,7 +13,7 @@ A skill is a folder containing a `SKILL.md` file (plus optional scripts, referen
 ## Prerequisites
 
 - An AI editor with Claude skills support (Claude Code, Augment Code, etc.)
-- The skill zip file: `set-up-django-gdpr-cookie-consent.zip`
+- [Git](https://git-scm.com/) installed
 
 ## Installation Steps
 
@@ -30,9 +30,14 @@ Common locations:
 
 > Check your editor's documentation if you're unsure which path it uses.
 
-### 2. Extract the zip file
+### 2. Clone the repository into your skills directory
 
-Extract the zip into the skills directory. The result should be a folder named `set-up-django-gdpr-cookie-consent` containing a `SKILL.md` file:
+```bash
+git clone https://github.com/websightful/set-up-django-gdpr-cookie-consent.git ~/projects/django-gdpr-cookie-consent-skill
+cp -r ~/projects/django-gdpr-cookie-consent-skill/set-up-django-gdpr-cookie-consent ~/.claude/skills/set-up-django-gdpr-cookie-consent
+```
+
+The result should be a folder named `set-up-django-gdpr-cookie-consent` containing a `SKILL.md` file:
 
 ```
 .claude/skills/
@@ -41,20 +46,9 @@ Extract the zip into the skills directory. The result should be a folder named `
     └── ... (any additional scripts or reference files)
 ```
 
-**macOS / Linux:**
-```bash
-unzip set-up-django-gdpr-cookie-consent.zip -d ~/.claude/skills/
-```
-
-**Windows (PowerShell):**
-```powershell
-Expand-Archive set-up-django-gdpr-cookie-consent.zip `
-  -DestinationPath "$HOME\.claude\skills\"
-```
-
 ### 3. Verify the structure
 
-Make sure the `SKILL.md` file is directly inside the extracted folder (not nested an extra level deep):
+Make sure the `SKILL.md` file is directly inside the cloned folder:
 
 ```bash
 # Should print the SKILL.md path
@@ -79,8 +73,7 @@ If the skill is loaded correctly, the AI will follow the structured workflow def
 |---|---|
 | Skill not triggering | Confirm the folder name matches exactly: `set-up-django-gdpr-cookie-consent` |
 | "Skill not found" error | Check the skills directory path — some editors use a different default |
-| Permissions error on extraction | Run the unzip command with `sudo` (Linux/macOS) or as Administrator (Windows) |
-| Extra nesting after unzip | Move the inner folder up one level so `SKILL.md` is directly inside the skill folder |
+| Extra nesting after clone | Move the inner folder up one level so `SKILL.md` is directly inside the skill folder |
 
 ## Uninstalling
 
