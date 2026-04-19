@@ -4,7 +4,7 @@ This guide explains how to install the **set-up-django-gdpr-cookie-consent** ski
 
 ## Why Use This Skill?
 
-Setting up GDPR-compliant cookie consent in Django involves multiple steps — installing the right package, wiring up templates, configuring cookie categories, and ensuring tracking scripts only load after user consent. Done manually, this is time-consuming and easy to get wrong. This skill automates the entire process: the AI follows a precise, tested workflow that correctly installs and configures **django-gdpr-cookie-consent** in your project in minutes, not hours. You get a fully functional cookie consent banner, properly categorised cookies, and GDPR-safe script loading — without having to read through documentation or debug integration issues yourself.
+Setting up GDPR-compliant cookie consent in Django involves multiple steps — installing the right package, wiring up templates, configuring cookie categories, and ensuring tracking scripts only load after user consent. Done manually, this is time-consuming and easy to get wrong. This skill automates the entire process: the AI follows a precise, tested workflow that correctly installs and configures [django-gdpr-cookie-consent](https://websightful.gumroad.com/l/django-gdpr-cookie-consent) in your project in minutes, not hours. You get a fully functional cookie consent banner, properly categorised cookies, and GDPR-safe script loading — without having to read through documentation or debug integration issues yourself.
 
 ## What is a Skill?
 
@@ -30,7 +30,9 @@ Common locations:
 
 > Check your editor's documentation if you're unsure which path it uses.
 
-### 2. Clone the repository into your skills directory
+### 2. Copy the skill to your skills directory
+
+Check out (or download and unzip) the repo and copy the skill to your `skills` directory:  
 
 ```bash
 git clone https://github.com/websightful/set-up-django-gdpr-cookie-consent.git ~/projects/django-gdpr-cookie-consent-skill
