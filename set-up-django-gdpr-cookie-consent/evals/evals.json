@@ -1,0 +1,63 @@
+{
+  "skill_name": "set-up-django-gdpr-cookie-consent",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need to add GDPR cookie consent to my Django project. The project is in evals/files/sample-django-project (relative to the skill directory). Set it up with Essential and Performance/Analytics sections — I use Google Analytics 4. My domain is .mysite.com. The wheel file doesn't exist yet so skip the installation step and just configure everything. Use 'center' for the dialog position.",
+      "expected_output": "The settings.py has gdpr_cookie_consent in INSTALLED_APPS and a complete COOKIE_CONSENT_SETTINGS with essential and performance sections. The urls.py includes the cookie_consent URLs. The base.html has the CSS link and widget include. A conditional template for performance cookies exists with a GA4 script placeholder.",
+      "files": [
+        "evals/files/sample-django-project/mysite/settings.py",
+        "evals/files/sample-django-project/mysite/urls.py",
+        "evals/files/sample-django-project/templates/base.html"
+      ],
+      "expectations": [
+        "gdpr_cookie_consent is added to INSTALLED_APPS in settings.py",
+        "COOKIE_CONSENT_SETTINGS is defined in settings.py with at least two sections: essential and performance",
+        "The essential section has required=True",
+        "The performance section has a conditional_html_template_name pointing to a template",
+        "The cookie consent URL pattern is added to urls.py with namespace='cookie_consent'",
+        "The base.html includes the gdpr-cookie-consent CSS link",
+        "The base.html includes the cookie_consent.html widget template",
+        "A conditional HTML template file is created for the performance section"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Help me set up django-gdpr-cookie-consent in my Django project at evals/files/sample-django-project-with-ga. I need Essential + Performance cookie sections. My site domain is .example.com. Skip the wheel installation step. The project already has Google Analytics in the base template — please handle that properly.",
+      "expected_output": "The settings.py is updated with INSTALLED_APPS and COOKIE_CONSENT_SETTINGS. The urls.py gets the cookie consent routes. The base.html gets the CSS/widget added. The existing GA script in base.html is moved to the conditional performance template. The user is informed about what was moved.",
+      "files": [
+        "evals/files/sample-django-project-with-ga/mysite/settings.py",
+        "evals/files/sample-django-project-with-ga/mysite/urls.py",
+        "evals/files/sample-django-project-with-ga/templates/base.html"
+      ],
+      "expectations": [
+        "gdpr_cookie_consent is added to INSTALLED_APPS in settings.py",
+        "COOKIE_CONSENT_SETTINGS is defined with essential and performance sections",
+        "The cookie consent URL pattern is added to urls.py",
+        "The base.html includes the gdpr-cookie-consent CSS link",
+        "The base.html includes the cookie_consent.html widget include",
+        "The existing Google Analytics script (G-ABC123XYZ9) is detected and flagged or moved to the conditional performance template",
+        "A conditional HTML template for performance section is created"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Set up django-gdpr-cookie-consent for the Django project at evals/files/sample-django-project. I need all four sections: Essential, Functionality, Performance, and Marketing. Domain is .shop.example.com. Skip wheel installation. Put the dialog at the bottom of the screen.",
+      "expected_output": "Settings.py gets all four cookie sections in COOKIE_CONSENT_SETTINGS. The dialog_position is set to 'bottom'. All three non-essential sections have conditional_html_template_name. Three conditional template files are created. URLs and base template are updated.",
+      "files": [
+        "evals/files/sample-django-project/mysite/settings.py",
+        "evals/files/sample-django-project/mysite/urls.py",
+        "evals/files/sample-django-project/templates/base.html"
+      ],
+      "expectations": [
+        "gdpr_cookie_consent is added to INSTALLED_APPS",
+        "COOKIE_CONSENT_SETTINGS contains four sections: essential, functionality, performance, marketing",
+        "dialog_position is set to 'bottom'",
+        "All three non-essential sections have conditional_html_template_name defined",
+        "Cookie consent URLs are added to urls.py",
+        "base.html has the CSS link and widget include",
+        "Three conditional template files are created (functionality, performance, marketing)"
+      ]
+    }
+  ]
+}
