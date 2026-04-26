@@ -14,6 +14,7 @@ A skill is a folder containing a `SKILL.md` file (plus optional scripts, referen
 
 - An AI editor with Claude skills support (Claude Code, Augment Code, etc.)
 - [Git](https://git-scm.com/) installed
+- [django-gdpr-cookie-consent wheel from Gumroad](https://websightful.gumroad.com/l/django-gdpr-cookie-consent) to install
 
 ## Installation Steps
 
